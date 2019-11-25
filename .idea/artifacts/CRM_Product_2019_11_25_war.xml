@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="CRM-Product-2019_11_25:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>CRM-Product-2019_11_25</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="crm-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="CRM-Product-2019_11_25:war exploded" />
+    </root>
+  </artifact>
+</component>

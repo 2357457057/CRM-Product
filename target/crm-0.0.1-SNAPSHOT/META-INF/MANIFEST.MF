@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Created-By: IntelliJ IDEA
+Built-By: 轻语
+Build-Jdk: 1.8.0_131
+Implementation-Title: crm
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.qy
+Main-Class: ${start-class}
+

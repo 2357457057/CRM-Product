@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    url: jdbc:mysql://yqingyu.top:3306/crm
+    username: admin
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: yyj.981010
+  mvc:
+    view:
+      suffix: .jsp
+      prefix: /pages/
+
+
+server:
+  port: 8888
+  servlet:
+    context-path: /crm
+
+
+mybatis:
+  type-aliases-package: com.qy.pojo
+#  mapper-locations: classpath:com/qy/mapper/*.xml
+
+mapper:
+  mappers:
+    - com.qy.mapper.UserMapper
+  notEmpty: true
