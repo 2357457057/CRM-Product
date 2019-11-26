@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8" isELIgnored="false" %>
+	pageEncoding="UTF-8"%>
 <%-- <%@taglib prefix="security" uri="http://www.springframework.org/security/tags" %> --%>
 <!-- 页面头部 -->
 <header class="main-header">
@@ -18,22 +18,22 @@
 		<div class="navbar-custom-menu">
 			<ul class="nav navbar-nav">
 
-				<li class="dropdown users users-menu"><a href="#"
+				<li class="dropdown user user-menu"><a href="#"
 					class="dropdown-toggle" data-toggle="dropdown"> <img
 						src="${pageContext.request.contextPath}/img/user2-160x160.jpg"
-						class="users-image" alt="User Image"> <span class="hidden-xs">
+						class="user-image" alt="User Image"> <span class="hidden-xs">
 							<!-- <security:authentication property="principal.username"></security:authentication> -->
 					</span>
 
 				</a>
 					<ul class="dropdown-menu">
 						<!-- User image -->
-						<li class="users-header"><img
+						<li class="user-header"><img
 							src="${pageContext.request.contextPath}/img/user2-160x160.jpg"
 							class="img-circle" alt="User Image"></li>
 
 						<!-- Menu Footer-->
-						<li class="users-footer">
+						<li class="user-footer">
 							<div class="pull-left">
 								<a href="#" class="btn btn-default btn-flat">修改密码</a>
 							</div>

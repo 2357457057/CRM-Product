@@ -10,7 +10,7 @@
 
     <title>用户信息</title>
     <!-- Tell the browser to be responsive to screen width -->
-    <meta content="width=device-width,initial-scale=1,maximum-scale=1,users-scalable=no" name="viewport">
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.6 -->
     <!-- Font Awesome -->
     <!-- Ionicons -->
@@ -136,7 +136,7 @@
             </h1>
             <ol class="breadcrumb">
                 <li><a href="${pageContext.request.contextPath}/index.jsp"><i class="fa fa-dashboard"></i> 首页</a></li>
-                <li><a href="${pageContext.request.contextPath}/users/findAll.do">用户管理</a></li>
+                <li><a href="${pageContext.request.contextPath}/user/findAll.do">用户管理</a></li>
                 <li class="active">用户详情</li>
             </ol>
         </section>
@@ -158,10 +158,10 @@
                         </tr>
                         </thead>
                         <tr data-tt-id="0">
-                            <td colspan="2">${users.username}</td>
+                            <td colspan="2">${user.username}</td>
                         </tr>
                         <tbody>
-                        <c:forEach items="${users.roles}" var="role" varStatus="vs">
+                        <c:forEach items="${user.roles}" var="role" varStatus="vs">
                             <tr data-tt-id="${vs.index+1}" data-tt-parent-id="0">
                                 <td>${role.roleName}</td>
                                 <td>${role.roleDesc}</td>

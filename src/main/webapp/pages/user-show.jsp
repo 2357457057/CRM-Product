@@ -12,7 +12,7 @@
 
     <!-- Tell the browser to be responsive to screen width -->
     <meta
-            content="width=device-width,initial-scale=1,maximum-scale=1,users-scalable=no"
+            content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
             name="viewport">
 
     <link rel="stylesheet"
@@ -84,7 +84,7 @@
                 <li><a href="${pageContext.request.contextPath}/index.jsp"><i
                         class="fa fa-dashboard"></i> 首页</a></li>
                 <li><a
-                        href="${pageContext.request.contextPath}/users/findAll.do">用户管理</a></li>
+                        href="${pageContext.request.contextPath}/user/findAll.do">用户管理</a></li>
 
                 <li class="active">全部用户</li>
             </ol>
@@ -137,11 +137,11 @@
                                 </tr>
                                 </thead>
                                 <tr data-tt-id="0">
-                                    <td colspan="2">${users.username}</td>
+                                    <td colspan="2">${user.username}</td>
                                 </tr>
 
                                 <tbody>
-                                <c:forEach items="${users.roles}" var="role" varStatus="vs1">
+                                <c:forEach items="${user.roles}" var="role" varStatus="vs1">
                                     <tr data-tt-id="${vs1.index+1}" data-tt-parent-id="0"">
                                         <td>${role.roleName }</td>
                                         <td>${role.roleDesc }</td>

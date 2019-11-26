@@ -10,7 +10,7 @@
 
 <!-- Tell the browser to be responsive to screen width -->
 <meta
-	content="width=device-width,initial-scale=1,maximum-scale=1,users-scalable=no"
+	content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
 	name="viewport">
 
 
@@ -83,13 +83,13 @@
 				<li><a href="${pageContext.request.contextPath}/index.jsp"><i
 						class="fa fa-dashboard"></i> 首页</a></li>
 				<li><a
-					href="${pageContext.request.contextPath}/users/findAll.do">用户管理</a></li>
+					href="${pageContext.request.contextPath}/user/findAll.do">用户管理</a></li>
 				<li class="active">用户表单</li>
 			</ol>
 			</section>
 			<!-- 内容头部 /-->
 
-			<form action="${pageContext.request.contextPath}/users/save.do"
+			<form action="${pageContext.request.contextPath}/user/save.do"
 				method="post">
 				<!-- 正文区域 -->
 				<section class="content"> <!--产品信息-->

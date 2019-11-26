@@ -12,7 +12,7 @@
 
 <!-- Tell the browser to be responsive to screen width -->
 <meta
-	content="width=device-width,initial-scale=1,maximum-scale=1,users-scalable=no"
+	content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
 	name="viewport">
 
 <link rel="stylesheet"
@@ -146,7 +146,7 @@
 											<td><input name="ids" type="checkbox"></td>
 											<td>1</td>
 											<td>admin</td>
-											<td>/users</td>
+											<td>/user</td>
 											<td class="text-center">
 												<a href="${pageContext.request.contextPath}/permission/findById.do?id=${p.id}" class="btn bg-olive btn-xs">详情</a>
 												<a href="${pageContext.request.contextPath}/permission/deletePermission.do?id=${p.id}" class="btn bg-olive btn-xs">删除权限</a>

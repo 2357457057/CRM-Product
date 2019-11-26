@@ -4,8 +4,8 @@
 <aside class="main-sidebar">
 	<!-- sidebar: style can be found in sidebar.less -->
 	<section class="sidebar">
-		<!-- Sidebar users panel -->
-		<div class="users-panel">
+		<!-- Sidebar user panel -->
+		<div class="user-panel">
 			<div class="pull-left image">
 				<img src="${pageContext.request.contextPath}/img/user2-160x160.jpg"
 					class="img-circle" alt="User Image">
@@ -37,7 +37,7 @@
 				<ul class="treeview-menu">
 					<li id="system-setting">
 						<a
-						href="${pageContext.request.contextPath}/pages/users-list.jsp"> <i
+						href="${pageContext.request.contextPath}/pages/user-list.jsp"> <i
 							class="fa fa-circle-o"></i> 用户管理
 					</a>
 					</li>

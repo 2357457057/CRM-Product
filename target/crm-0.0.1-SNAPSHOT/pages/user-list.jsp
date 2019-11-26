@@ -12,7 +12,7 @@
 
 <!-- Tell the browser to be responsive to screen width -->
 <meta
-	content="width=device-width,initial-scale=1,maximum-scale=1,users-scalable=no"
+	content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
 	name="viewport">
 
 <link rel="stylesheet"
@@ -83,7 +83,7 @@
 				<li><a href="${pageContext.request.contextPath}/index.jsp"><i
 						class="fa fa-dashboard"></i> 首页</a></li>
 				<li><a
-					href="${pageContext.request.contextPath}/pages/users-list.jsp">用户管理</a></li>
+					href="${pageContext.request.contextPath}/pages/user-list.jsp">用户管理</a></li>
 
 				<li class="active">全部用户</li>
 			</ol>
@@ -106,7 +106,7 @@
 							<div class="pull-left">
 								<div class="form-group form-inline">
 									<div class="btn-group">
-										<button type="button" class="btn btn-default" title="新建" onclick="location.href='${pageContext.request.contextPath}/pages/users-add.jsp'">
+										<button type="button" class="btn btn-default" title="新建" onclick="location.href='${pageContext.request.contextPath}/pages/user-add.jsp'">
 											<i class="fa fa-file-o"></i> 新建
 										</button>
 										
@@ -141,7 +141,7 @@
 										<th class="text-center">操作</th>
 									</tr>
 								</thead>
-								<tbody>
+								<tbody id="tbody">
 
 									
 										<tr>
@@ -152,8 +152,8 @@
 											<td>14567893451</td>
 											<td>未开启</td>											
 											<td class="text-center">
-												<a href="${pageContext.request.contextPath}/pages/users-show1.jsp" class="btn bg-olive btn-xs">详情</a>
-												<a href="${pageContext.request.contextPath}/pages/users-role-add.jsp" class="btn bg-olive btn-xs">添加角色</a>
+												<a href="${pageContext.request.contextPath}/pages/user-show1.jsp" class="btn bg-olive btn-xs">详情</a>
+												<a href="${pageContext.request.contextPath}/pages/user-role-add.jsp" class="btn bg-olive btn-xs">添加角色</a>
 											</td>
 										</tr>
 									
@@ -332,6 +332,29 @@
 												});
 							});
 		</script>
+	<script>
+		$(document).ready(function () {
+
+			$.post("${pageContext.request.contextPath}/getAllUser",{},callback)
+			function callback(data) {
+				for (var i =0;data.length;i++){
+					$("#tbody").append("<tr>\n" +
+							"\t\t\t\t\t\t\t\t\t\t\t<td><input name=\"ids\" type=\"checkbox\"></td>\n" +
+							"\t\t\t\t\t\t\t\t\t\t\t<td>"+i+"</td>\n" +
+							"\t\t\t\t\t\t\t\t\t\t\t<td>"+data[i].username+"</td>\n" +
+							"\t\t\t\t\t\t\t\t\t\t\t<td>"+data[i].email+"</td>\n" +
+							"\t\t\t\t\t\t\t\t\t\t\t<td>"+data[i].phoneNum+"</td>\n" +
+							"\t\t\t\t\t\t\t\t\t\t\t<td>未开启</td>\t\t\t\t\t\t\t\t\t\t\t\n" +
+							"\t\t\t\t\t\t\t\t\t\t\t<td class=\"text-center\">\n" +
+							"\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"${pageContext.request.contextPath}/pages/user-show1.jsp\" class=\"btn bg-olive btn-xs\">详情</a>\n" +
+							"\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"${pageContext.request.contextPath}/pages/user-role-add.jsp\" class=\"btn bg-olive btn-xs\">添加角色</a>\n" +
+							"\t\t\t\t\t\t\t\t\t\t\t</td>\n" +
+							"\t\t\t\t\t\t\t\t\t\t</tr>")
+				}
+			}
+
+		})
+	</script>
 </body>
 
 </html>

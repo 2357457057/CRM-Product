@@ -14,7 +14,7 @@
 
 <!-- Tell the browser to be responsive to screen width -->
 <meta
-	content="width=device-width,initial-scale=1,maximum-scale=1,users-scalable=no"
+	content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
 	name="viewport">
 
 
@@ -127,22 +127,22 @@
 		<div class="navbar-custom-menu">
 			<ul class="nav navbar-nav">
 
-				<li class="dropdown users users-menu"><a href="#"
+				<li class="dropdown user user-menu"><a href="#"
 					class="dropdown-toggle" data-toggle="dropdown"> <img
 						src="${pageContext.request.contextPath}/img/user2-160x160.jpg"
-						class="users-image" alt="User Image"> <span class="hidden-xs">
+						class="user-image" alt="User Image"> <span class="hidden-xs">
 							未登录
 					</span>
 
 				</a>
 					<ul class="dropdown-menu">
 						<!-- User image -->
-						<li class="users-header"><img
+						<li class="user-header"><img
 							src="${pageContext.request.contextPath}/img/user2-160x160.jpg"
 							class="img-circle" alt="User Image"></li>
 
 						<!-- Menu Footer-->
-						<li class="users-footer">
+						<li class="user-footer">
 							<div class="pull-left">
 								<a href="#" class="btn btn-default btn-flat">修改密码</a>
 							</div>
@@ -164,8 +164,8 @@
 		<aside class="main-sidebar">
 	<!-- sidebar: style can be found in sidebar.less -->
 	<section class="sidebar">
-		<!-- Sidebar users panel -->
-		<div class="users-panel">
+		<!-- Sidebar user panel -->
+		<div class="user-panel">
 			<div class="pull-left image">
 				<img src="${pageContext.request.contextPath}/img/user2-160x160.jpg"
 					class="img-circle" alt="User Image">
@@ -193,7 +193,7 @@
 				<ul class="treeview-menu">
 
 					<li id="system-setting"><a
-						href="${pageContext.request.contextPath}/users/findAll.do"> <i
+						href="${pageContext.request.contextPath}/user/findAll.do"> <i
 							class="fa fa-circle-o"></i> 用户管理
 					</a></li>
 					<li id="system-setting"><a href="${pageContext.request.contextPath}/role/findAll.do">
@@ -280,6 +280,8 @@
 		<!-- 底部导航 /-->
 
 	</div>
+
+
 	<script
 		src="${pageContext.request.contextPath}/plugins/jQuery/jquery-2.2.3.min.js"></script>
 	<script

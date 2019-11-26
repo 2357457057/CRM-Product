@@ -9,7 +9,7 @@
 <title>登陆页面</title>
 
 <meta
-	content="width=device-width,initial-scale=1,maximum-scale=1,users-scalable=no"
+	content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
 	name="viewport">
 
 <link rel="stylesheet"

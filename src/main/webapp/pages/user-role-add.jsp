@@ -11,7 +11,7 @@
 
 <!-- Tell the browser to be responsive to screen width -->
 <meta
-	content="width=device-width,initial-scale=1,maximum-scale=1,users-scalable=no"
+	content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
 	name="viewport">
 
 
@@ -84,19 +84,19 @@
 				<li><a href="${pageContext.request.contextPath}/index.jsp"><i
 						class="fa fa-dashboard"></i> 首页</a></li>
 				<li><a
-					href="${pageContext.request.contextPath}/users/findAll.do">用户管理</a></li>
+					href="${pageContext.request.contextPath}/user/findAll.do">用户管理</a></li>
 				<li class="active">添加角色表单</li>
 			</ol>
 			</section>
 			<!-- 内容头部 /-->
 
 			<form
-				action="${pageContext.request.contextPath}/users/addRoleToUser.do"
+				action="${pageContext.request.contextPath}/user/addRoleToUser.do"
 				method="post">
 				<!-- 正文区域 -->
 				<section class="content"> 
 				
-				<input type="hidden" name="userId" value="${users.id}">
+				<input type="hidden" name="userId" value="${user.id}">
 				
 					<table id="dataList"
 							class="table table-bordered table-striped table-hover dataTable">
