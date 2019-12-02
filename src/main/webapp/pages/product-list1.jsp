@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java"  isELIgnored="false" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 
@@ -206,25 +206,27 @@
                             </tr>
                             </thead>
                             <tbody>
-                           
+                            <c:set var="i" value="0"/>
+                            <c:forEach items="${requestScope.productList}" var="product">
                             <tr>
+                               <!-- ${i=i+1} -->
                                 <td><input name="ids" type="checkbox"></td>
-                                <td>2</td>
-                                <td>hwua-001
+                                <td>${i}</td>
+                                <td>${product.productNum}
                                 </td>
-                                <td>上海5日游</td>
+                                <td>${product.productName}</td>
                                 <td>上海</td>
-                                <td>2018-03-10 19:00:00</td>
-                                <td class="text-center">850</td>
+                                <td>${product.departureTime}</td>
+                                <td class="text-center">${product.productPrice}</td>
                                 <td class="text-center">关闭</td>
-                                <td class="text-center">${product.productStatusStr}</td>
+                                <td class="text-center">${product.productStatus}</td>
                                 <td class="text-center">
                                     <button type="button" class="btn bg-olive btn-xs">订单</button>
                                     <button type="button" class="btn bg-olive btn-xs">详情</button>
                                     <button type="button" class="btn bg-olive btn-xs">编辑</button>
                                 </td>
                             </tr>
-                           
+                            </c:forEach>
 
                             </tbody>
                             <!--

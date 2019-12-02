@@ -144,7 +144,7 @@
 								<tbody id="tbody">
 
 									
-										<tr>
+						<!--				<tr>
 											<td><input name="ids" type="checkbox"></td>
 											<td>1</td>
 											<td>陈豪</td>
@@ -155,7 +155,7 @@
 												<a href="${pageContext.request.contextPath}/pages/user-show1.jsp" class="btn bg-olive btn-xs">详情</a>
 												<a href="${pageContext.request.contextPath}/pages/user-role-add.jsp" class="btn bg-olive btn-xs">添加角色</a>
 											</td>
-										</tr>
+										</tr> -->
 									
 								</tbody>
 								<!--
@@ -333,23 +333,36 @@
 							});
 		</script>
 	<script>
+
+
+
+
 		$(document).ready(function () {
 
 			$.post("${pageContext.request.contextPath}/getAllUser",{},callback)
 			function callback(data) {
+				var str = "";
 				for (var i =0;data.length;i++){
-					$("#tbody").append("<tr>\n" +
-							"\t\t\t\t\t\t\t\t\t\t\t<td><input name=\"ids\" type=\"checkbox\"></td>\n" +
-							"\t\t\t\t\t\t\t\t\t\t\t<td>"+i+"</td>\n" +
-							"\t\t\t\t\t\t\t\t\t\t\t<td>"+data[i].username+"</td>\n" +
-							"\t\t\t\t\t\t\t\t\t\t\t<td>"+data[i].email+"</td>\n" +
-							"\t\t\t\t\t\t\t\t\t\t\t<td>"+data[i].phoneNum+"</td>\n" +
-							"\t\t\t\t\t\t\t\t\t\t\t<td>未开启</td>\t\t\t\t\t\t\t\t\t\t\t\n" +
-							"\t\t\t\t\t\t\t\t\t\t\t<td class=\"text-center\">\n" +
-							"\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"${pageContext.request.contextPath}/pages/user-show1.jsp\" class=\"btn bg-olive btn-xs\">详情</a>\n" +
-							"\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"${pageContext.request.contextPath}/pages/user-role-add.jsp\" class=\"btn bg-olive btn-xs\">添加角色</a>\n" +
-							"\t\t\t\t\t\t\t\t\t\t\t</td>\n" +
-							"\t\t\t\t\t\t\t\t\t\t</tr>")
+					str=	"<tr>\n" +
+							"<td><input name=\"ids\" type=\"checkbox\"></td>\n" +
+							"<td>"+(i+1)+"</td>\n" +
+							"<td>"+data[i].username+"</td>\n" +
+							"<td>"+data[i].email+"</td>\n" +
+							"<td>"+data[i].phoneNum+"</td>\n" ;
+					if(data[i].status !== 1 ){
+						// alert(typeof data[i].status +": " +data[i].status);
+						str+="<td>未开启</td>\n";
+					}else {
+						str+="<td>开启</td>\n";
+					}
+					str+=	"<td class=\"text-center\">\n"+
+							"<a href=\"${pageContext.request.contextPath}/user-show1/"+data[i].id+"\" class=\"btn bg-olive btn-xs\">详情</a>\n" +
+							"<a href=\"${pageContext.request.contextPath}/user-role-add/"+data[i].id+"\" class=\"btn bg-olive btn-xs\">添加角色</a>\n" +
+							"</td>\n" +
+							"</tr>";
+
+
+					$("#tbody").append(str)
 				}
 			}
 

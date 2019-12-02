@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * @author 轻语
@@ -16,13 +17,14 @@ import java.io.Serializable;
 @NoArgsConstructor
 public class Users implements Serializable {
 
-  private String id;
-  private String email;
-  private String username;
-  private String password;
-  @Column(name = "phonenum")
-  private String phoneNum;
-  private long status;
-
+      private String id;
+      private String email;
+      private String username;
+      private String password;
+      @Column(name = "phonenum")
+      private String phoneNum;
+      @Column(name = "STATUS")
+      private Integer status;
+      private List<Role> roles;
 
 }
