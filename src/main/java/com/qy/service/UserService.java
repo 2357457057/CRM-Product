@@ -11,4 +11,15 @@ public interface UserService {
 
 
     List<Users> getAllUser();
+
+
+
+
+    /**角色详情
+     *
+     * @param userId 用户id
+     * @return user-show1.jsp
+     */
+
+    void user_show1(String userId);
 }

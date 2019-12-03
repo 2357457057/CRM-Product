@@ -23,4 +23,17 @@ mybatis:
 mapper:
   mappers:
     - com.qy.mapper.UserMapper
+    - com.qy.mapper.ProductMapper
   notEmpty: true
+
+pagehelper:
+  auto-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
+  page-size-zero: true
+
+shiro:
+  loginUrl: /pages/login.jsp
+  successUrl: /pages/main.jsp
+  unauthorizedUrl: /
