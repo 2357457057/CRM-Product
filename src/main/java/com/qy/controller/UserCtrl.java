@@ -25,7 +25,9 @@ public class UserCtrl {
 
     @RequestMapping("/login.do")
     public ModelAndView login(Users users,HttpSession session){
+        System.out.println(users);
         Users loginUsers = userService.login(users);
+        System.out.println(loginUsers);
         ModelAndView mv = new ModelAndView("main");
         if(loginUsers != null){
             session.setAttribute("user",loginUsers);
